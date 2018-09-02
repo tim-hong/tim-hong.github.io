@@ -23,6 +23,14 @@
         font-size: 2.5rem;
         font-family: $font-display !important;
         color: $color-primary-dark;
+
+        @media only screen and (max-width: $bp-sm){
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest){
+            font-size: 2.5rem;
+        }
     }
 
     &__section {
@@ -30,6 +38,12 @@
         flex-direction: column;
         align-items: flex-end;
         text-align: end;
+
+        @media only screen and (max-width: $bp-md){
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
 
         @media only screen and (max-width: $bp-smallest){
             grid-column: center-start / center-end;
@@ -44,5 +58,13 @@
         font-size: 2rem;
         text-decoration: none;
         list-style-type: none;
+        
+        @media only screen and (max-width: $bp-sm){
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest){
+            font-size: 2rem;
+        }
     }
 }
