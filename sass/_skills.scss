@@ -1,0 +1,36 @@
+.skills {
+    padding: 4rem 0;
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba($color-secondary, .80), rgba($color-secondary, .80)),
+    url(../img/hex-pattern.png);
+    background-repeat: repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    color: $color-grey-light-1;
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-family: $font-display !important;
+        color: $color-primary-dark;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: end;
+    }
+
+    &__list {
+        font-size: 2rem;
+        text-decoration: none;
+        list-style-type: none;
+    }
+}

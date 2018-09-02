@@ -1,0 +1,25 @@
+.papers {
+    padding: 4rem;
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba($color-primary, .63), rgba($color-primary, .63)),
+    url(../img/logo-x-pattern.png);
+    background-repeat: repeat;
+    color: $color-grey-light-1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.papers_section__title {
+    color: $color-secondary;
+}
+
+.paper {
+    &__title {
+        color: $color-secondary;
+        font-size: 2rem;
+    }
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: $color-black;
+}

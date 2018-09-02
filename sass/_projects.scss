@@ -1,0 +1,104 @@
+.projects {
+    background-image: linear-gradient(rgba($color-secondary, .80), rgba($color-secondary, .80)),
+    url(../img/hypno-pattern.png);
+    grid-column: full-start / full-end;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: minmax(4rem, 1fr) [card-start] repeat(3, minmax(calc(33vw - 6rem), 60rem)) [card-end] minmax(4rem, 1fr);
+}
+.projects-list {
+    grid-row: 2/-1;
+    grid-column: card-start / card-end;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(calc(33vw - 6rem), 60rem));
+    grid-gap: 3rem;
+    justify-content: space-evenly;
+}
+
+.projects_section__title {
+    margin-bottom: 4rem;
+    color: $color-grey-light-1;
+}
+
+
+.project {
+    min-height: 30rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    justify-content: flex-start;
+    border-radius: 4px;
+    color: white;
+    background-color: green;
+    box-shadow: 0 0 4px rgba($color: #000000, $alpha: .2);
+    &__icon {
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border-radius: 4px;
+        margin-top: -60px;
+        color: #000;
+    }
+
+    &__title {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: $font-display;
+        font-size: 3rem;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--text {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    a {
+        align-self: center;
+        color: $color-secondary;
+        transition: color .2s;
+    }
+
+    a:hover,
+    a:active {
+        color: $color-secondary-light;
+    }
+}
+
+#quilt {
+    background-color: #ff7472;
+}
+
+#gameblobs {
+    background-color: #50a6ff;
+}
+
+#gametypes {
+    background-color: #12cc6d;
+}
+
+#supHighlighter {
+    background-color: #f9e492;
+    color: $color-black;
+}
+
+#talktown {
+    background-color: #eaf4f4;
+    color: $color-black;
+}
+
+#portfolio {
+    background-color: $color-primary-light;
+    color: $color-black;
+}

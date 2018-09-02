@@ -1,0 +1,50 @@
+.experience {
+    grid-column: full-start / full-end;
+    padding: 4rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(rgba($color-grey-light-1, .60), rgba($color-grey-light-1, .60)),
+    url(../img/tic-tac-toe-pattern.png);
+    background-repeat: repeat;
+
+    a {
+        color: $color-secondary;
+        font-size: 2rem;
+        transition: color .2s;
+        justify-self: center;
+    }
+
+    a:hover,
+    a:active {
+        color: $color-secondary-light;
+    }
+}
+.experience_section__title {
+    color: $color-primary;
+}
+
+.job {
+    color: #555;
+    margin: 4rem 0;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+
+        &--company {
+            color: $color-primary;
+        }
+    }
+    &__title {
+        font-size: 2rem;
+        color: $color-secondary;
+    }
+
+    &__responsibilities {
+        &--item {
+            font-size: 1.5rem;
+        }
+    }
+}

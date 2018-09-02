@@ -1,0 +1,83 @@
+.story {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba($color-primary, .63), rgba($color-primary, .63)),
+    url(../img/sun-pattern.png);
+    background-repeat: repeat;
+    color: $color-grey-light-1;
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: [full-start] minmax(6rem, 1fr)
+    [center-start] minmax(min-content, 80vw)
+    [center-end] minmax(6rem, 1fr) [full-end]
+
+}
+
+.story-content {
+    display: grid;
+    justify-items: center;
+    grid-column: center-start / center-end;
+}
+.namecard {
+    margin-top: 2rem;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-display;
+
+    &-title {
+        color: $color-secondary;
+    }
+}
+
+.intro {
+    font-size: 2rem;
+    margin: 0 4rem;
+    padding-bottom: 4rem;
+    
+    p {
+        margin-bottom: 2rem;
+        color: $color-grey-dark-2;
+    }
+
+    .tagline {
+        font-weight: bold;
+        color: $color-grey-light-1;
+        text-align: center;
+    }
+
+    .emphasis {
+        font-weight: bold;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+
+    a {
+        text-decoration: none;
+        color: $color-secondary;
+        transition: color .2s;
+    }
+
+    a:hover,
+    a:active {
+        color: $color-secondary-light;
+    }
+}
+
+
+.social__item {
+    display: flex;
+    align-items: center;
+}
+
+.social__icon {
+    margin-left: 2rem;
+    height: 3rem;
+    width: 3rem;
+    fill: $color-secondary;
+}
