@@ -10,12 +10,23 @@
 .projects-container {
     display: grid;
     grid-template-columns: minmax(4rem, 1fr) [card-start] repeat(3, minmax(calc(33vw - 6rem), 60rem)) [card-end] minmax(4rem, 1fr);
+
+    @media only screen and (max-width: $bp-largest){
+        grid-template-columns: minmax(4rem, 1fr) [card-start] repeat(2, minmax(calc(50vw - 6rem), 60rem)) [card-end] minmax(4rem, 1fr);
+    }
 }
 .projects-list {
     grid-row: 2/-1;
     grid-column: card-start / card-end;
     display: grid;
     grid-template-columns: repeat(3, minmax(calc(33vw - 6rem), 60rem));
+    @media only screen and (max-width: $bp-largest){
+        grid-template-columns:  repeat(2, calc(50vw - 6rem));
+    }
+
+    @media only screen and (max-width: $bp-md){
+        grid-template-columns: calc(100vw - 6rem);
+    }
     grid-gap: 3rem;
     justify-content: space-evenly;
 }

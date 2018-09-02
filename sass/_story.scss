@@ -9,14 +9,30 @@
     justify-items: center;
     grid-template-columns: [full-start] minmax(6rem, 1fr)
     [center-start] minmax(min-content, 80vw)
-    [center-end] minmax(6rem, 1fr) [full-end]
+    [center-end] minmax(6rem, 1fr) [full-end];
 
+    @media only screen and (max-width: $bp-largest){
+        grid-template-columns: [full-start] 2rem
+        [center-start] calc(100vw-2rem)
+        [center-end] 2rem [full-end];
+    }
+
+    @media only screen and (max-width: $bp-sm){
+        grid-template-columns: [full-start] 2rem
+        [center-start] calc(100vw-2rem)
+        [center-end] 2rem [full-end];
+    }
 }
 
 .story-content {
     display: grid;
     justify-items: center;
     grid-column: center-start / center-end;
+
+    @media only screen and (max-width: $bp-lg){
+        margin: 0 4rem;
+        grid-column: full-start / full-end;
+    }
 }
 .namecard {
     margin-top: 2rem;
@@ -28,7 +44,12 @@
 
     &-title {
         color: $color-secondary;
+
+        @media only screen and (max-width: $bp-smaller){
+            font-size: 3rem;
+        }
     }
+
 }
 
 .intro {
@@ -36,6 +57,14 @@
     margin: 0 4rem;
     padding-bottom: 4rem;
     
+    @media only screen and (max-width: $bp-largest){
+        margin: 0 2rem;
+    }
+
+    @media only screen and (max-width: $bp-md){
+        margin: 0;
+    }
+
     p {
         margin-bottom: 2rem;
         color: $color-grey-dark-2;
@@ -80,4 +109,8 @@
     height: 3rem;
     width: 3rem;
     fill: $color-secondary;
+
+    @media only screen and (max-width: $bp-sm){
+        display: none;
+    }
 }

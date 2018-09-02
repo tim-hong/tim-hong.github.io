@@ -32,7 +32,9 @@
         display: flex;
         justify-content: space-between;
         font-size: 2rem;
-
+        @media only screen and (max-width: $bp-sm){
+            flex-direction: column;
+        }
         &--company {
             color: $color-primary;
         }
@@ -45,6 +47,10 @@
     &__responsibilities {
         &--item {
             font-size: 1.5rem;
+
+            @media only screen and (max-width: $bp-md){
+                font-size: 1.8rem;
+            }
         }
     }
 }

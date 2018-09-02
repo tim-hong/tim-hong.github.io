@@ -6,12 +6,23 @@
     grid-column: full-start / full-end;
 
     display: grid;
+
+    @media only screen and(max-width: $bp-smallest) {
+        display: flex;
+        flex-direction: column;
+    }
+
     /*
     justify-content: space-between;
     align-items: center;
     */
     align-items: center;
     padding: 0 4rem;
+
+    @media only screen and (max-width: $bp-md){
+        padding: 0 1rem;
+    }
+
     font-size: 2rem;
 
     a {
@@ -31,14 +42,15 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        .name {
-            margin-left: 2rem;
-        }
     }
     .links {
         grid-row: 1 / 2;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        @media only screen and (max-width: $bp-md){
+            align-self:stretch;
+        }
     }
 }
